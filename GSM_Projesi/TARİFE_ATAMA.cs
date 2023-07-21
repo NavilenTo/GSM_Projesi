@@ -90,6 +90,7 @@ namespace GSM_Projesi
             DataView dv = tbl.DefaultView;
             dv.RowFilter = "Convert(TC, 'System.String') like '" + textBox4.Text + "%'";
             TARİFE_ATAMA_MÜŞTERİ.DataSource = dv;
+            //verileri tabloya aldık
         }
 
         private void Guncelle()
