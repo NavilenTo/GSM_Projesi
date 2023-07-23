@@ -84,7 +84,7 @@
             // Tarife_Müşteri
             // 
             Tarife_Müşteri.FormattingEnabled = true;
-            Tarife_Müşteri.Location = new Point(469, 88);
+            Tarife_Müşteri.Location = new Point(403, 282);
             Tarife_Müşteri.Name = "Tarife_Müşteri";
             Tarife_Müşteri.Size = new Size(121, 23);
             Tarife_Müşteri.TabIndex = 18;

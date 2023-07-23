@@ -60,6 +60,74 @@ namespace GSM_Projesi
 
         private void TARİFE_ATA_Click(object sender, EventArgs e)
         {
+            baglantı.Close();
+            baglantı.Open();
+
+            string tarifeID = "0";
+            string musteriID = "0";
+
+            string kmt = "select TarifeID from TARİFELER where TarifeAdı=''" + Tarife_Müşteri.Text + "'";
+            SqlCommand sqlCommand = new SqlCommand(kmt, baglantı);
+            SqlDataReader dr = sqlCommand.ExecuteReader();
+            if (dr.Read())
+            {
+                tarifeID = dr[0].ToString();
+            }
+            
+            kmt = "select MusteriID from MÜŞTERİLER where TC=" + textBox3.Text;
+            sqlCommand = new SqlCommand(kmt, baglantı);
+            dr = sqlCommand.ExecuteReader();
+            if (dr.Read())
+            {
+                musteriID = dr[0].ToString();
+            }
+            
+            baglantı.Close();
+
+            try
+            {
+                if (baglantı.State == ConnectionState.Closed)
+                    baglantı.Open();
+                string kayıt = "INSERT INTO MÜŞTERİ_TARİFELERİ(Ad,Soyad,TarifeBaşlangıç,TarifeBitiş,TarifeID, TC, GSMno, MüşteriID) values(@Ad,@Soyad,@TarifeBaslangic,@TarifeBitis,@TarifeID, @TC, @GSMno, @MusteriID)";
+                SqlCommand cmd = new SqlCommand(kayıt, baglantı);
+
+
+                if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "" && textBox5.Text == "" && textBox6.Text == "")
+                {
+                    MessageBox.Show("Boş Alan Bırakmayınız");
+                }
+
+                cmd.Parameters.AddWithValue("@Ad", textBox1.Text);
+                cmd.Parameters.AddWithValue("@Soyad", textBox2.Text);
+                cmd.Parameters.AddWithValue("@TarifeBaslangic", DateTime.Now.Date.ToString());
+                cmd.Parameters.AddWithValue("@TarifeBitis", DateTime.Now.AddYears(1).ToString());
+                cmd.Parameters.AddWithValue("@TarifeID", tarifeID);
+
+                cmd.Parameters.AddWithValue("@TC", textBox3.Text);
+                cmd.Parameters.AddWithValue("@GSMno", textBox5.Text);
+                cmd.Parameters.AddWithValue("@MusteriID", musteriID);
+
+
+                cmd.ExecuteNonQuery();
+
+                baglantı.Close();
+                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti");
+
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("İşlem Sırasında Hata Oluştu" + hata.Message);
+            }
+
+
+
+
             //SqlCommand komut = new SqlCommand("SELECT MÜŞTERİLER.MuşteriID, MÜŞTERİLER.Ad, MÜŞTERİLER.Soyad, MÜŞTERİLER.TC, MÜŞTERİLER.GSMno TARİFELER.TarifeAdı FROM MÜŞTERİ_TARİFELER INNER JOIN MÜŞTERİLER ON TARİFELER.TarifeID = MÜŞTERİLER.MusteriID WHERE MÜŞTERİLER.MusteriID);
             SqlCommand komut = new SqlCommand("INSERT INTO SELECT MÜŞTERİ_TABLOSU.MüşteriID, FROM MÜŞTERİLER JOİN islem on MÜŞTERİLER.MüşteriID= islem.MüşteriID JOİN TARİFELER ON TARİFELER.TarifeID = islem.TarifeID");
             baglantı.Open();
@@ -74,7 +142,7 @@ namespace GSM_Projesi
             adtr = new SqlDataAdapter("SELECT * FROM MÜŞTERİLER", baglantı);
             adtr.Fill(tbl);
             TARİFE_ATAMA_MÜŞTERİ.DataSource = tbl;
-            return tbl;  
+            return tbl;
         }
 
 
@@ -106,7 +174,7 @@ namespace GSM_Projesi
         int seçilensatır;
 
 
-        
+
 
         private void TARİFE_ATAMA_MÜŞTERİ_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

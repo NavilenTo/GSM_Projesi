@@ -89,6 +89,7 @@
             Controls.Add(MÜŞTERİ_iŞLEMLERİ);
             Name = "İşlemler";
             Text = "İŞLEMLER";
+            FormClosing += İşlemler_FormClosing;
             ResumeLayout(false);
         }
 

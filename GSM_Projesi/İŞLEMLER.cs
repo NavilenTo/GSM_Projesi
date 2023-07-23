@@ -44,6 +44,11 @@ namespace GSM_Projesi
             TAHSİLAT_iŞLEMLERİ ac = new TAHSİLAT_iŞLEMLERİ();
             ac.Show();
         }
+
+        private void İşlemler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

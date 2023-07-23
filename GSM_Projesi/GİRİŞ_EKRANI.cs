@@ -1,4 +1,5 @@
 using System.ComponentModel.Design.Serialization;
+using System.Data.SqlClient;
 
 namespace GSM_Projesi
 {
@@ -8,6 +9,8 @@ namespace GSM_Projesi
         {
             InitializeComponent();
         }
+
+        public SqlConnection sqlConnection = new SqlConnection("Data Source=localhost;Initial Catalog=Tbl_GSM;Integrated Security=True");
 
 
         private void GÝRÝÞ_YAP_Click(object sender, EventArgs e)

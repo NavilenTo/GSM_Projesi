@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +41,8 @@ namespace GSM_Projesi
                     baglantı.Open();
                 string kayıt = "INSERT INTO MÜŞTERİLER(Ad,Soyad,TC,GSMno,EMail) values(@Ad,@Soyad,@TC,@GSMno,@EMail)";
                 SqlCommand komut = new SqlCommand(kayıt, baglantı);
+
+                
                 if (YENİ_KAYIT_AD.Text == "" && YENİ_KAYIT_SOYAD.Text == "" && YENİ_KAYIT_TC.Text == "" && YENİ_KAYIT_TELNO.Text == "" && YENİ_KAYIT_E_MAİL.Text == "")
                 {
                     MessageBox.Show("Boş Alan Bırakmayınız");
@@ -50,14 +52,38 @@ namespace GSM_Projesi
                 komut.Parameters.AddWithValue("@Soyad", YENİ_KAYIT_SOYAD.Text);
                 komut.Parameters.AddWithValue("@TC", YENİ_KAYIT_TC.Text);
                 komut.Parameters.AddWithValue("@GSMno", YENİ_KAYIT_TELNO.Text);
-                komut.Parameters.AddWithValue("@EMail", YENİ_KAYIT_E_MAİL.Text);
+
+
+                if (YENİ_KAYIT_E_MAİL.Text.EndsWith("@hotmail.com") || YENİ_KAYIT_E_MAİL.Text.EndsWith("@gmail.com") || YENİ_KAYIT_E_MAİL.Text.EndsWith("@icloud.com"))
+                {
+                    komut.Parameters.AddWithValue("@Email", YENİ_KAYIT_E_MAİL.Text);
+                }
+
+                else
+                {
+                    MessageBox.Show("*Geçersiz mail adresi.\nLütfen geçerli bir mail adresi girin. \n(sadece hotmail, gmail ya da Icloud hesapları geçerlidir)");
+                }
+
+
 
                 komut.ExecuteNonQuery();
-               
+
 
                 baglantı.Close();
+
+                //foreach (TextBox item in this)
+                //{
+                //    item.Clear();
+                //}
+
                 MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti");
-                
+
+                YENİ_KAYIT_AD.Clear();
+                YENİ_KAYIT_SOYAD.Clear();
+                YENİ_KAYIT_TC.Clear();
+                YENİ_KAYIT_TELNO.Clear();
+                YENİ_KAYIT_E_MAİL.Clear();
+
             }
             catch (Exception hata)
             {
