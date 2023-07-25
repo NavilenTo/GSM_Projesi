@@ -58,7 +58,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = TAHSİLAT_GERİ;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(823, 454);
             Controls.Add(dataGridView1);
             Controls.Add(TAHSİLAT_GERİ);
             Name = "TAHSİLATLAR";

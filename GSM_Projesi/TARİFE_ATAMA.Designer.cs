@@ -44,6 +44,8 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             label5 = new Label();
+            textBox10 = new TextBox();
+            textBox11 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)TARİFE_ATAMA_MÜŞTERİ).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             TARİFEATAMA.AutoSize = true;
             TARİFEATAMA.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             TARİFEATAMA.ForeColor = SystemColors.Highlight;
-            TARİFEATAMA.Location = new Point(519, 9);
+            TARİFEATAMA.Location = new Point(574, 9);
             TARİFEATAMA.Name = "TARİFEATAMA";
             TARİFEATAMA.Size = new Size(176, 37);
             TARİFEATAMA.TabIndex = 15;
@@ -73,7 +75,7 @@
             // TARİFE_ATA
             // 
             TARİFE_ATA.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            TARİFE_ATA.Location = new Point(785, 430);
+            TARİFE_ATA.Location = new Point(677, 414);
             TARİFE_ATA.Name = "TARİFE_ATA";
             TARİFE_ATA.Size = new Size(121, 29);
             TARİFE_ATA.TabIndex = 16;
@@ -93,10 +95,10 @@
             // TARİFE_ATAMA_MÜŞTERİ
             // 
             TARİFE_ATAMA_MÜŞTERİ.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TARİFE_ATAMA_MÜŞTERİ.Location = new Point(756, 67);
+            TARİFE_ATAMA_MÜŞTERİ.Location = new Point(585, 67);
             TARİFE_ATAMA_MÜŞTERİ.Name = "TARİFE_ATAMA_MÜŞTERİ";
             TARİFE_ATAMA_MÜŞTERİ.RowTemplate.Height = 25;
-            TARİFE_ATAMA_MÜŞTERİ.Size = new Size(574, 288);
+            TARİFE_ATAMA_MÜŞTERİ.Size = new Size(756, 288);
             TARİFE_ATAMA_MÜŞTERİ.TabIndex = 21;
             TARİFE_ATAMA_MÜŞTERİ.CellDoubleClick += TARİFE_ATAMA_MÜŞTERİ_CellDoubleClick;
             // 
@@ -153,7 +155,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(756, 38);
+            textBox4.Location = new Point(1174, 38);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(167, 23);
             textBox4.TabIndex = 28;
@@ -193,12 +195,28 @@
             label5.TabIndex = 32;
             label5.Text = "Tarife";
             // 
+            // textBox10
+            // 
+            textBox10.Location = new Point(1366, 502);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(87, 23);
+            textBox10.TabIndex = 33;
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(1366, 473);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(73, 23);
+            textBox11.TabIndex = 34;
+            // 
             // TARİFE_ATAMA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = TARİFE_ATAMA_GERİ;
-            ClientSize = new Size(1342, 544);
+            ClientSize = new Size(1353, 544);
+            Controls.Add(textBox11);
+            Controls.Add(textBox10);
             Controls.Add(label5);
             Controls.Add(textBox6);
             Controls.Add(label4);
@@ -240,5 +258,7 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private Label label5;
+        private TextBox textBox10;
+        private TextBox textBox11;
     }
 }

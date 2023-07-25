@@ -32,6 +32,10 @@
             dataGridView1 = new DataGridView();
             label1 = new Label();
             TAHSİLAT_ALMA_GERİ = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,15 +48,17 @@
             Tahsilat_Alma_Button.TabIndex = 0;
             Tahsilat_Alma_Button.Text = "Tahsilat Al";
             Tahsilat_Alma_Button.UseVisualStyleBackColor = true;
+            Tahsilat_Alma_Button.Click += Tahsilat_Alma_Button_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 60);
+            dataGridView1.Location = new Point(12, 49);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(776, 319);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // label1
             // 
@@ -77,18 +83,60 @@
             TAHSİLAT_ALMA_GERİ.UseVisualStyleBackColor = true;
             TAHSİLAT_ALMA_GERİ.Click += TAHSİLAT_ALMA_GERİ_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(1045, 110);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 15;
+            label2.Text = "label2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(1045, 125);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 16;
+            label3.Text = "label3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(1045, 140);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 17;
+            label4.Text = "label4";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(1045, 155);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 18;
+            label5.Text = "label5";
+            // 
             // TAHSİLAT_ALMA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = TAHSİLAT_ALMA_GERİ;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1338, 450);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(TAHSİLAT_ALMA_GERİ);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(Tahsilat_Alma_Button);
             Name = "TAHSİLAT_ALMA";
             Text = "TAHSİLAT_ALMA";
+            Load += TAHSİLAT_ALMA_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -100,5 +148,9 @@
         private DataGridView dataGridView1;
         private Label label1;
         private Button TAHSİLAT_ALMA_GERİ;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }

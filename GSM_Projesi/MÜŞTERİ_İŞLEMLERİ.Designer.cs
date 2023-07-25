@@ -34,6 +34,7 @@
             MÜŞTERİ_LİSTESİ = new Button();
             MÜŞTERİ_İŞLEMLERİ_GERİ = new Button();
             Tarifeli_Müşteriler = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // MÜŞTERİ_KAYIT
@@ -103,12 +104,24 @@
             Tarifeli_Müşteriler.UseVisualStyleBackColor = true;
             Tarifeli_Müşteriler.Click += Tarifeli_Müşteriler_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button1.Location = new Point(316, 301);
+            button1.Name = "button1";
+            button1.Size = new Size(154, 37);
+            button1.TabIndex = 8;
+            button1.Text = "Yeni Tarife Atama";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MÜŞTERİ_İŞLEMLERİ
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = MÜŞTERİ_İŞLEMLERİ_GERİ;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(Tarifeli_Müşteriler);
             Controls.Add(MÜŞTERİ_İŞLEMLERİ_GERİ);
             Controls.Add(MÜŞTERİ_LİSTESİ);
@@ -129,5 +142,6 @@
         private Button MÜŞTERİ_LİSTESİ;
         private Button MÜŞTERİ_İŞLEMLERİ_GERİ;
         private Button Tarifeli_Müşteriler;
+        private Button button1;
     }
 }

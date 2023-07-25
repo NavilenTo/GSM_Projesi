@@ -113,7 +113,7 @@
             Controls.Add(label1);
             Controls.Add(Tarife_Sil);
             Name = "TARİFELER";
-            Text = "TARİFELER";
+            Text = "v";
             ((System.ComponentModel.ISupportInitialize)Tarifeler_DataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();

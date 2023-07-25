@@ -51,5 +51,12 @@ namespace GSM_Projesi
             Tarifeli_Müşteriler ac = new Tarifeli_Müşteriler();
             ac.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YENİ_TARİFE_ATAMA ac = new YENİ_TARİFE_ATAMA();
+            ac.Show();
+        }
     }
 }

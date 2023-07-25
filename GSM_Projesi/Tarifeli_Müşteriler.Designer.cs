@@ -31,7 +31,8 @@
             dataGridView1 = new DataGridView();
             label1 = new Label();
             Tarifeli_Müşteri_Sil = new Button();
-            button2 = new Button();
+            YENİ_TARİFE_GERİ = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -58,28 +59,44 @@
             // Tarifeli_Müşteri_Sil
             // 
             Tarifeli_Müşteri_Sil.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Tarifeli_Müşteri_Sil.Location = new Point(746, 164);
+            Tarifeli_Müşteri_Sil.Location = new Point(749, 114);
             Tarifeli_Müşteri_Sil.Name = "Tarifeli_Müşteri_Sil";
-            Tarifeli_Müşteri_Sil.Size = new Size(94, 28);
+            Tarifeli_Müşteri_Sil.Size = new Size(128, 29);
             Tarifeli_Müşteri_Sil.TabIndex = 2;
             Tarifeli_Müşteri_Sil.Text = "Sil";
             Tarifeli_Müşteri_Sil.UseVisualStyleBackColor = true;
+            Tarifeli_Müşteri_Sil.Click += Tarifeli_Müşteri_Sil_Click;
             // 
-            // button2
+            // YENİ_TARİFE_GERİ
             // 
-            button2.Location = new Point(746, 215);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 28);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            YENİ_TARİFE_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            YENİ_TARİFE_GERİ.ForeColor = SystemColors.ControlText;
+            YENİ_TARİFE_GERİ.Location = new Point(12, 409);
+            YENİ_TARİFE_GERİ.Name = "YENİ_TARİFE_GERİ";
+            YENİ_TARİFE_GERİ.Size = new Size(128, 29);
+            YENİ_TARİFE_GERİ.TabIndex = 28;
+            YENİ_TARİFE_GERİ.Text = "Geri";
+            YENİ_TARİFE_GERİ.UseVisualStyleBackColor = true;
+            YENİ_TARİFE_GERİ.Click += YENİ_TARİFE_GERİ_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(12, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(158, 25);
+            label2.TabIndex = 30;
+            label2.Text = "TarifeliMüşteriler";
             // 
             // Tarifeli_Müşteriler
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(965, 450);
-            Controls.Add(button2);
+            CancelButton = YENİ_TARİFE_GERİ;
+            ClientSize = new Size(972, 471);
+            Controls.Add(label2);
+            Controls.Add(YENİ_TARİFE_GERİ);
             Controls.Add(Tarifeli_Müşteri_Sil);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
@@ -95,6 +112,7 @@
         private DataGridView dataGridView1;
         private Label label1;
         private Button Tarifeli_Müşteri_Sil;
-        private Button button2;
+        private Button YENİ_TARİFE_GERİ;
+        private Label label2;
     }
 }

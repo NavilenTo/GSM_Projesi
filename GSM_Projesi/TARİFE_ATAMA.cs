@@ -40,6 +40,7 @@ namespace GSM_Projesi
         {
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM TARİFELER", baglantı);
             Guncelle();
+            
 
             baglantı.Open();
             SqlDataReader dr = sqlCommand.ExecuteReader();
@@ -60,80 +61,52 @@ namespace GSM_Projesi
 
         private void TARİFE_ATA_Click(object sender, EventArgs e)
         {
+            baglantı.Open();
+            SqlCommand komut2 = new SqlCommand("SELECT * FROM tarifeler where tarifeadı='" + textBox6.Text + "'", baglantı);
+            SqlDataReader read = komut2.ExecuteReader();
+            while (read.Read())
+            {
+                textBox10.Text = read["TarifeID"].ToString();
+
+            }
+            baglantı.Close();
+
+            baglantı.Open();
+            SqlCommand komut3 = new SqlCommand("SELECT * FROM müşteriler where ad='" + textBox1.Text + "'", baglantı);
+            SqlDataReader read2 = komut3.ExecuteReader();
+            while (read2.Read())
+            {
+                textBox11.Text = read2["MusteriID"].ToString();
+
+            }
             baglantı.Close();
             baglantı.Open();
 
-            string tarifeID = "0";
-            string musteriID = "0";
-
-            string kmt = "select TarifeID from TARİFELER where TarifeAdı=''" + Tarife_Müşteri.Text + "'";
-            SqlCommand sqlCommand = new SqlCommand(kmt, baglantı);
-            SqlDataReader dr = sqlCommand.ExecuteReader();
-            if (dr.Read())
-            {
-                tarifeID = dr[0].ToString();
-            }
-            
-            kmt = "select MusteriID from MÜŞTERİLER where TC=" + textBox3.Text;
-            sqlCommand = new SqlCommand(kmt, baglantı);
-            dr = sqlCommand.ExecuteReader();
-            if (dr.Read())
-            {
-                musteriID = dr[0].ToString();
-            }
-            
-            baglantı.Close();
-
-            try
-            {
-                if (baglantı.State == ConnectionState.Closed)
-                    baglantı.Open();
-                string kayıt = "INSERT INTO MÜŞTERİ_TARİFELERİ(Ad,Soyad,TarifeBaşlangıç,TarifeBitiş,TarifeID, TC, GSMno, MüşteriID) values(@Ad,@Soyad,@TarifeBaslangic,@TarifeBitis,@TarifeID, @TC, @GSMno, @MusteriID)";
-                SqlCommand cmd = new SqlCommand(kayıt, baglantı);
-
-
-                if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "" && textBox5.Text == "" && textBox6.Text == "")
-                {
-                    MessageBox.Show("Boş Alan Bırakmayınız");
-                }
-
-                cmd.Parameters.AddWithValue("@Ad", textBox1.Text);
-                cmd.Parameters.AddWithValue("@Soyad", textBox2.Text);
-                cmd.Parameters.AddWithValue("@TarifeBaslangic", DateTime.Now.Date.ToString());
-                cmd.Parameters.AddWithValue("@TarifeBitis", DateTime.Now.AddYears(1).ToString());
-                cmd.Parameters.AddWithValue("@TarifeID", tarifeID);
-
-                cmd.Parameters.AddWithValue("@TC", textBox3.Text);
-                cmd.Parameters.AddWithValue("@GSMno", textBox5.Text);
-                cmd.Parameters.AddWithValue("@MusteriID", musteriID);
-
-
-                cmd.ExecuteNonQuery();
-
-                baglantı.Close();
-                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti");
-
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox5.Clear();
-                textBox6.Clear();
-
-            }
-            catch (Exception hata)
-            {
-                MessageBox.Show("İşlem Sırasında Hata Oluştu" + hata.Message);
-            }
-
-
-
-
-            //SqlCommand komut = new SqlCommand("SELECT MÜŞTERİLER.MuşteriID, MÜŞTERİLER.Ad, MÜŞTERİLER.Soyad, MÜŞTERİLER.TC, MÜŞTERİLER.GSMno TARİFELER.TarifeAdı FROM MÜŞTERİ_TARİFELER INNER JOIN MÜŞTERİLER ON TARİFELER.TarifeID = MÜŞTERİLER.MusteriID WHERE MÜŞTERİLER.MusteriID);
-            SqlCommand komut = new SqlCommand("INSERT INTO SELECT MÜŞTERİ_TABLOSU.MüşteriID, FROM MÜŞTERİLER JOİN islem on MÜŞTERİLER.MüşteriID= islem.MüşteriID JOİN TARİFELER ON TARİFELER.TarifeID = islem.TarifeID");
-            baglantı.Open();
-            Tarife_Müşteri_SelectedIndexChanged(sender, e);
+            SqlCommand komut = new SqlCommand("insert into müşteritarifeleri(Ad,Soyad,TarifeBaşlangıç,TarifeBitiş,TarifeID,TC,GSMno,MüşteriID)values (@Ad,@Soyad,@TarifeBaşlangıç,@TarifeBitiş,@TarifeID,@TC,@GSMno,@MüşteriID)", baglantı);
+            komut.Connection = baglantı;
+            komut.Parameters.AddWithValue("@Ad", textBox1.Text);
+            komut.Parameters.AddWithValue("@Soyad", textBox2.Text);
+            komut.Parameters.AddWithValue("@TarifeBaşlangıç", DateTime.Now);
+            komut.Parameters.AddWithValue("@TarifeBitiş", DateTime.Now.AddYears(1));
+            komut.Parameters.AddWithValue("TarifeID", Convert.ToInt32(textBox10.Text));
+            komut.Parameters.AddWithValue("@TC", textBox3.Text);
+            komut.Parameters.AddWithValue("@GSMno", textBox5.Text);
+            komut.Parameters.AddWithValue("@MüşteriID", Convert.ToInt32(textBox11.Text));
             komut.ExecuteNonQuery();
             baglantı.Close();
+
+            MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti");
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+
+
+
+
+
 
         }
         DataTable GetList()
@@ -144,6 +117,9 @@ namespace GSM_Projesi
             TARİFE_ATAMA_MÜŞTERİ.DataSource = tbl;
             return tbl;
         }
+
+
+
 
 
         private void Tarife_Müşteri_SelectedIndexChanged(object sender, EventArgs e)
