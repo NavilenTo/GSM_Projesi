@@ -31,7 +31,6 @@
             dataGridView1 = new DataGridView();
             label1 = new Label();
             Faturlar_Sil = new Button();
-            Faturlar_Güncelle = new Button();
             FATURALAR_GERİ = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -65,16 +64,7 @@
             Faturlar_Sil.TabIndex = 2;
             Faturlar_Sil.Text = "Sil";
             Faturlar_Sil.UseVisualStyleBackColor = true;
-            // 
-            // Faturlar_Güncelle
-            // 
-            Faturlar_Güncelle.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Faturlar_Güncelle.Location = new Point(632, 203);
-            Faturlar_Güncelle.Name = "Faturlar_Güncelle";
-            Faturlar_Güncelle.Size = new Size(110, 29);
-            Faturlar_Güncelle.TabIndex = 3;
-            Faturlar_Güncelle.Text = "Güncelle";
-            Faturlar_Güncelle.UseVisualStyleBackColor = true;
+            Faturlar_Sil.Click += Faturlar_Sil_Click;
             // 
             // FATURALAR_GERİ
             // 
@@ -95,7 +85,6 @@
             CancelButton = FATURALAR_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(FATURALAR_GERİ);
-            Controls.Add(Faturlar_Güncelle);
             Controls.Add(Faturlar_Sil);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
@@ -111,7 +100,6 @@
         private DataGridView dataGridView1;
         private Label label1;
         private Button Faturlar_Sil;
-        private Button Faturlar_Güncelle;
         private Button FATURALAR_GERİ;
     }
 }

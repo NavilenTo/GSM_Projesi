@@ -63,6 +63,7 @@
             Controls.Add(TAHSİLAT_GERİ);
             Name = "TAHSİLATLAR";
             Text = "TAHSİLATLAR";
+            Load += TAHSİLATLAR_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

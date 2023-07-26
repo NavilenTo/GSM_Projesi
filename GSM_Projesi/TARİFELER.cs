@@ -17,8 +17,19 @@ namespace GSM_Projesi
     {
         public TARİFELER()
         {
+            DataTable yenile()
+            {
+                baglantı.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select * From TARİFELER", baglantı);
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                baglantı.Close();
+                return tablo;
+            }
             InitializeComponent();
             GetList();
+            Tarifeler_DataGridView.DataSource = yenile();
+            this.Tarifeler_DataGridView.Columns["TarifeID"].Visible = false;
         }
 
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");

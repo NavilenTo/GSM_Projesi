@@ -16,8 +16,21 @@ namespace GSM_Projesi
     {
         public FATURA_OLUŞTUR()
         {
+            DataTable yenile()
+            {
+                baglantı.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select * From MüşteriTarifeleri Left JOIN TARİFELER on TARİFELER.TarifeID = MüşteriTarifeleri.TarifeID", baglantı);
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                baglantı.Close();
+                return tablo;
+            }
             InitializeComponent();
             GetList();
+            dataGridView1.DataSource = yenile();
+            this.dataGridView1.Columns["TarifeID"].Visible = false;
+            this.dataGridView1.Columns["MüşteriID"].Visible = false;
+            this.dataGridView1.Columns["TarifeID1"].Visible = false;
         }
 
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");
@@ -33,7 +46,7 @@ namespace GSM_Projesi
         {
 
             tbl.Clear();
-            adtr = new SqlDataAdapter("SELECT * From faturalar", baglantı);
+            adtr = new SqlDataAdapter("SELECT * From MüşteriTarifeleri", baglantı);
             adtr.Fill(tbl);
             dataGridView1.DataSource = tbl;
             return tbl;
@@ -65,15 +78,23 @@ namespace GSM_Projesi
             }
             baglantı.Close();
 
+            label2.Show();
+            label3.Show();
+            label4.Show();
         }
 
         private void FATURA_OLUŞTUR_Load(object sender, EventArgs e)
         {
 
+            label2.Hide();
+            label3.Hide();
+            label4.Hide();
+
+
             SqlConnection baglanti = new SqlConnection();
             baglanti.ConnectionString = "Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True";
             SqlCommand komut = new SqlCommand();
-            komut.CommandText = "SELECT *FROM müşteritarifeleri";
+            komut.CommandText = "SELECT * FROM MüşteriTarifeleri";
             komut.Connection = baglanti;
             komut.CommandType = CommandType.Text;
 
@@ -95,13 +116,13 @@ namespace GSM_Projesi
             komut.Connection = baglantı;
             komut.Parameters.AddWithValue("@MüşteriID", label2.Text);
             komut.Parameters.AddWithValue("@TarifeID", label3.Text);
-            komut.Parameters.AddWithValue("@Ücret", Convert.ToInt32(label4.Text));
-            komut.Parameters.AddWithValue("@Dönem", aylartext.Text);
-           
+            komut.Parameters.AddWithValue("@Ücret", Convert.ToDouble(label4.Text));
+            komut.Parameters.AddWithValue("@Dönem", Aylar.Text);
+
             komut.ExecuteNonQuery();
             baglantı.Close();
 
-            MessageBox.Show("Fatura Güncelleme İşlemi Gerçekleşti");
+            MessageBox.Show("Fatura Oluşturma İşlemi Gerçekleşti");
         }
     }
 }

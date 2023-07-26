@@ -16,7 +16,18 @@ namespace GSM_Projesi
     {
         public TARİFE_ATAMA()
         {
+            DataTable yenile()
+            {
+                baglantı.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select * From MÜŞTERİLER", baglantı);
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                baglantı.Close();
+                return tablo;
+            }
             InitializeComponent();
+            TARİFE_ATAMA_MÜŞTERİ.DataSource = yenile();
+            this.TARİFE_ATAMA_MÜŞTERİ.Columns["MusteriID"].Visible = false;
         }
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");
         SqlDataAdapter adtr;

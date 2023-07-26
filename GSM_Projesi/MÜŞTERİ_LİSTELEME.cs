@@ -16,8 +16,19 @@ namespace GSM_Projesi
     {
         public MÜŞTERİ_LİSTELEME()
         {
+            DataTable yenile()
+            {
+                baglantı.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select * From MÜŞTERİLER", baglantı);
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                baglantı.Close();
+                return tablo;
+            }
             InitializeComponent();
             GetList();
+            dataGridView1.DataSource = yenile();
+            this.dataGridView1.Columns["MusteriID"].Visible = false;
         }
 
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");
@@ -99,6 +110,7 @@ namespace GSM_Projesi
                 MessageBox.Show("Güncellemede Hata Oluştu");
             }
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

@@ -19,6 +19,19 @@ namespace GSM_Projesi
             InitializeComponent();
             GetList();
             //GetList2();
+            dataGridView1.DataSource = yenile();
+            this.dataGridView1.Columns["TarifeID"].Visible = false;
+            this.dataGridView1.Columns["MüşteriID"].Visible = false;
+            this.dataGridView1.Columns["TarifeID1"].Visible = false;
+        }
+        DataTable yenile()
+        {
+            baglantı.Open();
+            SqlDataAdapter da = new SqlDataAdapter("Select * From MüşteriTarifeleri Left JOIN TARİFELER on TARİFELER.TarifeID = MüşteriTarifeleri.TarifeID", baglantı);
+            DataTable tablo = new DataTable();
+            da.Fill(tablo);
+            baglantı.Close();
+            return tablo;
         }
 
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");
@@ -149,6 +162,13 @@ namespace GSM_Projesi
             textBox2.Text = dataGridView1.CurrentRow.Cells["Soyad"].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells["TC"].Value.ToString();
             textBox5.Text = dataGridView1.CurrentRow.Cells["GSMno"].Value.ToString();
+        }
+
+        private void YENİ_TARİFE_GERİ_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MÜŞTERİ_İŞLEMLERİ ac = new MÜŞTERİ_İŞLEMLERİ();
+            ac.Show();
         }
     }
 }

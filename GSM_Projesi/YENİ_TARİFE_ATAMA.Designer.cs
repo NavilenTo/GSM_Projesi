@@ -45,6 +45,7 @@
             YeniTarifeAtama = new Button();
             textBox11 = new TextBox();
             textBox10 = new TextBox();
+            YENİ_TARİFE_GERİ = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -198,11 +199,25 @@
             textBox10.TabIndex = 45;
             textBox10.Visible = false;
             // 
+            // YENİ_TARİFE_GERİ
+            // 
+            YENİ_TARİFE_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            YENİ_TARİFE_GERİ.ForeColor = SystemColors.ControlText;
+            YENİ_TARİFE_GERİ.Location = new Point(12, 409);
+            YENİ_TARİFE_GERİ.Name = "YENİ_TARİFE_GERİ";
+            YENİ_TARİFE_GERİ.Size = new Size(128, 29);
+            YENİ_TARİFE_GERİ.TabIndex = 47;
+            YENİ_TARİFE_GERİ.Text = "Geri";
+            YENİ_TARİFE_GERİ.UseVisualStyleBackColor = true;
+            YENİ_TARİFE_GERİ.Click += YENİ_TARİFE_GERİ_Click;
+            // 
             // YENİ_TARİFE_ATAMA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = YENİ_TARİFE_GERİ;
             ClientSize = new Size(1415, 450);
+            Controls.Add(YENİ_TARİFE_GERİ);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
             Controls.Add(YeniTarifeAtama);
@@ -247,5 +262,6 @@
         private Button YeniTarifeAtama;
         private TextBox textBox11;
         private TextBox textBox10;
+        private Button YENİ_TARİFE_GERİ;
     }
 }

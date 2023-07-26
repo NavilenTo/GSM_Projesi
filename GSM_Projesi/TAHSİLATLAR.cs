@@ -37,5 +37,10 @@ namespace GSM_Projesi
             dataGridView1.DataSource = tbl;
             return tbl;
         }
+
+        private void TAHSİLATLAR_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace GSM_Projesi
             InitializeComponent();
             //GetList();
             //GetList2();
-           dataGridView1.DataSource = yenile();
+            dataGridView1.DataSource = yenile();
             this.dataGridView1.Columns["TarifeID"].Visible = false;
             this.dataGridView1.Columns["MüşteriID"].Visible = false;
             this.dataGridView1.Columns["TarifeID1"].Visible = false;

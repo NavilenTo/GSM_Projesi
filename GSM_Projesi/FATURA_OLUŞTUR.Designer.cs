@@ -36,7 +36,6 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            aylartext = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -65,6 +64,7 @@
             // Aylar
             // 
             Aylar.FormattingEnabled = true;
+            Aylar.Items.AddRange(new object[] { "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" });
             Aylar.Location = new Point(721, 77);
             Aylar.Name = "Aylar";
             Aylar.Size = new Size(121, 23);
@@ -120,20 +120,12 @@
             label4.TabIndex = 15;
             label4.Text = "label4";
             // 
-            // aylartext
-            // 
-            aylartext.Location = new Point(742, 120);
-            aylartext.Name = "aylartext";
-            aylartext.Size = new Size(100, 23);
-            aylartext.TabIndex = 17;
-            // 
             // FATURA_OLUŞTUR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = FATURA_OLUŞTUR_GERİ;
             ClientSize = new Size(1309, 490);
-            Controls.Add(aylartext);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -161,6 +153,5 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox aylartext;
     }
 }
