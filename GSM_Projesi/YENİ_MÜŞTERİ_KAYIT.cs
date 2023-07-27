@@ -42,7 +42,7 @@ namespace GSM_Projesi
                 string kayıt = "INSERT INTO MÜŞTERİLER(Ad,Soyad,TC,GSMno,EMail) values(@Ad,@Soyad,@TC,@GSMno,@EMail)";
                 SqlCommand komut = new SqlCommand(kayıt, baglantı);
 
-                
+
                 if (YENİ_KAYIT_AD.Text == "" && YENİ_KAYIT_SOYAD.Text == "" && YENİ_KAYIT_TC.Text == "" && YENİ_KAYIT_TELNO.Text == "" && YENİ_KAYIT_E_MAİL.Text == "")
                 {
                     MessageBox.Show("Boş Alan Bırakmayınız");

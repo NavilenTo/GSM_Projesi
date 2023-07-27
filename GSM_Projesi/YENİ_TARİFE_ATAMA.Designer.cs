@@ -51,8 +51,10 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(34, 58);
+            dataGridView1.GridColor = Color.White;
+            dataGridView1.Location = new Point(91, 70);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(730, 286);
@@ -62,6 +64,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(584, 9);
@@ -72,7 +75,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(34, 29);
+            textBox1.Location = new Point(91, 41);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(153, 23);
             textBox1.TabIndex = 2;
@@ -81,7 +84,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(932, 261);
             label5.Name = "label5";
             label5.Size = new Size(69, 30);
@@ -98,7 +103,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(929, 218);
             label4.Name = "label4";
             label4.Size = new Size(76, 30);
@@ -115,7 +122,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(948, 170);
             label3.Name = "label3";
             label3.Size = new Size(38, 30);
@@ -132,7 +141,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(932, 121);
             label2.Name = "label2";
             label2.Size = new Size(71, 30);
@@ -149,7 +160,9 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
             label6.Location = new Point(948, 70);
             label6.Name = "label6";
             label6.Size = new Size(39, 30);
@@ -174,13 +187,15 @@
             // 
             // YeniTarifeAtama
             // 
+            YeniTarifeAtama.BackColor = Color.Snow;
+            YeniTarifeAtama.FlatStyle = FlatStyle.Flat;
             YeniTarifeAtama.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            YeniTarifeAtama.Location = new Point(584, 368);
+            YeniTarifeAtama.Location = new Point(641, 380);
             YeniTarifeAtama.Name = "YeniTarifeAtama";
             YeniTarifeAtama.Size = new Size(189, 34);
             YeniTarifeAtama.TabIndex = 44;
             YeniTarifeAtama.Text = "Yeni Tarifeye geçiş";
-            YeniTarifeAtama.UseVisualStyleBackColor = true;
+            YeniTarifeAtama.UseVisualStyleBackColor = false;
             YeniTarifeAtama.Click += YeniTarifeAtama_Click;
             // 
             // textBox11
@@ -201,13 +216,15 @@
             // 
             // YENİ_TARİFE_GERİ
             // 
+            YENİ_TARİFE_GERİ.BackgroundImage = Properties.Resources.back;
+            YENİ_TARİFE_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            YENİ_TARİFE_GERİ.FlatStyle = FlatStyle.Flat;
             YENİ_TARİFE_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             YENİ_TARİFE_GERİ.ForeColor = SystemColors.ControlText;
-            YENİ_TARİFE_GERİ.Location = new Point(12, 409);
+            YENİ_TARİFE_GERİ.Location = new Point(12, 12);
             YENİ_TARİFE_GERİ.Name = "YENİ_TARİFE_GERİ";
-            YENİ_TARİFE_GERİ.Size = new Size(128, 29);
+            YENİ_TARİFE_GERİ.Size = new Size(67, 29);
             YENİ_TARİFE_GERİ.TabIndex = 47;
-            YENİ_TARİFE_GERİ.Text = "Geri";
             YENİ_TARİFE_GERİ.UseVisualStyleBackColor = true;
             YENİ_TARİFE_GERİ.Click += YENİ_TARİFE_GERİ_Click;
             // 
@@ -215,6 +232,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = YENİ_TARİFE_GERİ;
             ClientSize = new Size(1415, 450);
             Controls.Add(YENİ_TARİFE_GERİ);
@@ -236,6 +255,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "YENİ_TARİFE_ATAMA";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             Load += YENİ_TARİFE_ATAMA_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

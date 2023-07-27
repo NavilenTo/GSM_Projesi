@@ -49,6 +49,14 @@ namespace GSM_Projesi
         {
             Application.Exit();
         }
+
+        //private void İşlemler_Resize(object sender, EventArgs e)
+        //{
+        //    MÜŞTERİ_iŞLEMLERİ.Location = new Point(this.Width - (this.Width - MÜŞTERİ_iŞLEMLERİ.Location.X), this.Height - (this.Height - MÜŞTERİ_iŞLEMLERİ.Location.Y));
+        //    TAHSİLAT_İŞLEMLERİ.Location = new Point(this.Width - (TAHSİLAT_İŞLEMLERİ.Width + TAHSİLAT_İŞLEMLERİ.Location.X), this.Height - (TAHSİLAT_İŞLEMLERİ.Height + TAHSİLAT_İŞLEMLERİ.Location.Y));
+        //    TARİFE_İŞLEMLERİ.Location = new Point(this.Width - (TARİFE_İŞLEMLERİ.Width + TARİFE_İŞLEMLERİ.Location.X), this.Height - (TARİFE_İŞLEMLERİ.Height + TARİFE_İŞLEMLERİ.Location.Y));
+        //    FATURA_İŞLEMLERİ.Location = new Point(this.Width - (FATURA_İŞLEMLERİ.Width + FATURA_İŞLEMLERİ.Location.X), this.Height - (FATURA_İŞLEMLERİ.Height + FATURA_İŞLEMLERİ.Location.Y));
+        //}
     }
 }
 

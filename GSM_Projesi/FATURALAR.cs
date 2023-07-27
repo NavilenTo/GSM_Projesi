@@ -93,7 +93,7 @@ namespace GSM_Projesi
             }
         }
 
-        }
     }
+}
 
 

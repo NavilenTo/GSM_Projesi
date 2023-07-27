@@ -41,18 +41,21 @@
             // 
             // FATURAA_OLUŞTUR
             // 
+            FATURAA_OLUŞTUR.BackColor = Color.White;
+            FATURAA_OLUŞTUR.FlatStyle = FlatStyle.Flat;
             FATURAA_OLUŞTUR.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FATURAA_OLUŞTUR.Location = new Point(396, 444);
             FATURAA_OLUŞTUR.Name = "FATURAA_OLUŞTUR";
             FATURAA_OLUŞTUR.Size = new Size(123, 34);
             FATURAA_OLUŞTUR.TabIndex = 0;
             FATURAA_OLUŞTUR.Text = "Fatura Oluştur";
-            FATURAA_OLUŞTUR.UseVisualStyleBackColor = true;
+            FATURAA_OLUŞTUR.UseVisualStyleBackColor = false;
             FATURAA_OLUŞTUR.Click += FATURAA_OLUŞTUR_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(374, 9);
@@ -73,7 +76,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(12, 77);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -83,19 +88,23 @@
             // 
             // FATURA_OLUŞTUR_GERİ
             // 
+            FATURA_OLUŞTUR_GERİ.BackColor = Color.White;
+            FATURA_OLUŞTUR_GERİ.BackgroundImage = Properties.Resources.back;
+            FATURA_OLUŞTUR_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            FATURA_OLUŞTUR_GERİ.FlatStyle = FlatStyle.Flat;
             FATURA_OLUŞTUR_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FATURA_OLUŞTUR_GERİ.ForeColor = SystemColors.ControlText;
-            FATURA_OLUŞTUR_GERİ.Location = new Point(12, 449);
+            FATURA_OLUŞTUR_GERİ.Location = new Point(12, 12);
             FATURA_OLUŞTUR_GERİ.Name = "FATURA_OLUŞTUR_GERİ";
-            FATURA_OLUŞTUR_GERİ.Size = new Size(128, 29);
+            FATURA_OLUŞTUR_GERİ.Size = new Size(60, 29);
             FATURA_OLUŞTUR_GERİ.TabIndex = 12;
-            FATURA_OLUŞTUR_GERİ.Text = "Geri";
-            FATURA_OLUŞTUR_GERİ.UseVisualStyleBackColor = true;
+            FATURA_OLUŞTUR_GERİ.UseVisualStyleBackColor = false;
             FATURA_OLUŞTUR_GERİ.Click += FATURA_OLUŞTUR_GERİ_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(1158, 89);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
@@ -105,6 +114,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(1158, 104);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
@@ -114,6 +124,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Location = new Point(1158, 123);
             label4.Name = "label4";
             label4.Size = new Size(38, 15);
@@ -124,6 +135,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = FATURA_OLUŞTUR_GERİ;
             ClientSize = new Size(1309, 490);
             Controls.Add(label4);
@@ -135,6 +148,7 @@
             Controls.Add(label1);
             Controls.Add(FATURAA_OLUŞTUR);
             Name = "FATURA_OLUŞTUR";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FATURA_OLUŞTUR";
             Load += FATURA_OLUŞTUR_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

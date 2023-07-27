@@ -63,7 +63,7 @@ namespace GSM_Projesi
             da.Fill(tablo);
             baglantı.Close();
             return tablo;
-        
+
 
         }
         private void MÜŞTERİ_SİL_Click(object sender, EventArgs e)

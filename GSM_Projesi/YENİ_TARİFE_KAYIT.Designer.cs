@@ -50,7 +50,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(244, 229);
             label4.Name = "label4";
             label4.Size = new Size(126, 25);
@@ -60,7 +62,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(244, 192);
             label2.Name = "label2";
             label2.Size = new Size(124, 25);
@@ -84,7 +88,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(244, 156);
             label1.Name = "label1";
             label1.Size = new Size(100, 25);
@@ -93,18 +99,23 @@
             // 
             // YENİ_TARİFE_KAYDET
             // 
+            YENİ_TARİFE_KAYDET.BackColor = Color.White;
+            YENİ_TARİFE_KAYDET.FlatStyle = FlatStyle.Flat;
             YENİ_TARİFE_KAYDET.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            YENİ_TARİFE_KAYDET.Image = Properties.Resources.ok__1_2;
+            YENİ_TARİFE_KAYDET.ImageAlign = ContentAlignment.MiddleLeft;
             YENİ_TARİFE_KAYDET.Location = new Point(380, 272);
             YENİ_TARİFE_KAYDET.Name = "YENİ_TARİFE_KAYDET";
             YENİ_TARİFE_KAYDET.Size = new Size(118, 34);
             YENİ_TARİFE_KAYDET.TabIndex = 19;
             YENİ_TARİFE_KAYDET.Text = "Kaydet";
-            YENİ_TARİFE_KAYDET.UseVisualStyleBackColor = true;
+            YENİ_TARİFE_KAYDET.UseVisualStyleBackColor = false;
             YENİ_TARİFE_KAYDET.Click += YENİ_TARİFE_KAYDET_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Highlight;
             label3.Location = new Point(342, 96);
@@ -115,13 +126,14 @@
             // 
             // YENİ_TARİFE_GERİ
             // 
+            YENİ_TARİFE_GERİ.BackgroundImage = Properties.Resources.back;
+            YENİ_TARİFE_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
             YENİ_TARİFE_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             YENİ_TARİFE_GERİ.ForeColor = SystemColors.ControlText;
-            YENİ_TARİFE_GERİ.Location = new Point(12, 409);
+            YENİ_TARİFE_GERİ.Location = new Point(12, 12);
             YENİ_TARİFE_GERİ.Name = "YENİ_TARİFE_GERİ";
-            YENİ_TARİFE_GERİ.Size = new Size(128, 29);
+            YENİ_TARİFE_GERİ.Size = new Size(63, 29);
             YENİ_TARİFE_GERİ.TabIndex = 27;
-            YENİ_TARİFE_GERİ.Text = "Geri";
             YENİ_TARİFE_GERİ.UseVisualStyleBackColor = true;
             YENİ_TARİFE_GERİ.Click += YENİ_TARİFE_GERİ_Click;
             // 
@@ -129,6 +141,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = YENİ_TARİFE_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(YENİ_TARİFE_GERİ);
@@ -141,6 +155,7 @@
             Controls.Add(label1);
             Controls.Add(YENİ_TARİFE_KAYDET);
             Name = "YENİ_TARİFE_KAYIT";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "YENİ_TARİFE_KAYIT";
             ResumeLayout(false);
             PerformLayout();

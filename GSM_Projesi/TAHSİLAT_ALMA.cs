@@ -17,7 +17,7 @@ namespace GSM_Projesi
         public TAHSİLAT_ALMA()
         {
             InitializeComponent();
-            
+
         }
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-1PBBFPF;Initial Catalog=Tbl_GSM;Integrated Security=True");
         SqlDataAdapter adtr;
@@ -46,11 +46,11 @@ namespace GSM_Projesi
             ac.Show();
         }
 
-       
+
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             label2.Text = dataGridView1.CurrentRow.Cells["FaturaID"].Value.ToString();
             label3.Text = dataGridView1.CurrentRow.Cells["TarifeID"].Value.ToString();
             label4.Text = dataGridView1.CurrentRow.Cells["Ücret"].Value.ToString();
@@ -70,7 +70,7 @@ namespace GSM_Projesi
             label4.Visible = true;
             label5.Visible = true;
             baglantı.Open();
-            
+
 
             SqlCommand komut = new SqlCommand("insert into tahsilat (FaturaID,TarifeID,TarifeÜcreti,Dönem,TahsilTarihi)values (@FaturaID,@TarifeID,@TarifeÜcreti,@Dönem,@TahsilTarihi)", baglantı);
             komut.Connection = baglantı;
@@ -79,7 +79,7 @@ namespace GSM_Projesi
             komut.Parameters.AddWithValue("@TarifeÜcreti", label4.Text);
             komut.Parameters.AddWithValue("@Dönem", label5.Text);
             komut.Parameters.AddWithValue("@TahsilTarihi", DateTime.Now);
-           
+
             komut.ExecuteNonQuery();
             baglantı.Close();
             MessageBox.Show("Test");
@@ -92,7 +92,7 @@ namespace GSM_Projesi
             string sorgu = "delete from FATURALAR where FaturaID=" + Convert.ToInt32(label2.Text);
             SqlDataAdapter adp = new SqlDataAdapter(sorgu, baglantı);
             DataTable tablo = new DataTable();
-            
+
             adp.Update(tablo);
             dataGridView1.DataSource = tablo;
             baglantı.Close();
@@ -126,5 +126,4 @@ namespace GSM_Projesi
             label5.Visible = false;
         }
     }
-    }
-    
+}

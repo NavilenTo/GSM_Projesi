@@ -37,6 +37,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(276, 9);
@@ -47,42 +48,49 @@
             // 
             // Tahsilatlar
             // 
+            Tahsilatlar.BackColor = Color.White;
             Tahsilatlar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Tahsilatlar.Location = new Point(334, 190);
+            Tahsilatlar.Location = new Point(329, 242);
             Tahsilatlar.Name = "Tahsilatlar";
             Tahsilatlar.Size = new Size(125, 33);
             Tahsilatlar.TabIndex = 1;
             Tahsilatlar.Text = "Tahsilatlar";
-            Tahsilatlar.UseVisualStyleBackColor = true;
+            Tahsilatlar.UseVisualStyleBackColor = false;
             Tahsilatlar.Click += Tahsilatlar_Click;
             // 
             // Tahsilat_Alma
             // 
+            Tahsilat_Alma.BackColor = Color.White;
             Tahsilat_Alma.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Tahsilat_Alma.Location = new Point(334, 103);
+            Tahsilat_Alma.Location = new Point(329, 155);
             Tahsilat_Alma.Name = "Tahsilat_Alma";
             Tahsilat_Alma.Size = new Size(125, 33);
             Tahsilat_Alma.TabIndex = 2;
             Tahsilat_Alma.Text = "Tahsilat Alma";
-            Tahsilat_Alma.UseVisualStyleBackColor = true;
+            Tahsilat_Alma.UseVisualStyleBackColor = false;
             Tahsilat_Alma.Click += Tahsilat_Alma_Click;
             // 
             // TAHSİLAT_İŞLEMLERİ_GERİ
             // 
+            TAHSİLAT_İŞLEMLERİ_GERİ.BackColor = Color.White;
+            TAHSİLAT_İŞLEMLERİ_GERİ.BackgroundImage = Properties.Resources.back;
+            TAHSİLAT_İŞLEMLERİ_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            TAHSİLAT_İŞLEMLERİ_GERİ.FlatStyle = FlatStyle.Flat;
             TAHSİLAT_İŞLEMLERİ_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TAHSİLAT_İŞLEMLERİ_GERİ.ForeColor = SystemColors.ControlText;
-            TAHSİLAT_İŞLEMLERİ_GERİ.Location = new Point(12, 409);
+            TAHSİLAT_İŞLEMLERİ_GERİ.Location = new Point(12, 12);
             TAHSİLAT_İŞLEMLERİ_GERİ.Name = "TAHSİLAT_İŞLEMLERİ_GERİ";
-            TAHSİLAT_İŞLEMLERİ_GERİ.Size = new Size(128, 29);
+            TAHSİLAT_İŞLEMLERİ_GERİ.Size = new Size(61, 29);
             TAHSİLAT_İŞLEMLERİ_GERİ.TabIndex = 14;
-            TAHSİLAT_İŞLEMLERİ_GERİ.Text = "Geri";
-            TAHSİLAT_İŞLEMLERİ_GERİ.UseVisualStyleBackColor = true;
+            TAHSİLAT_İŞLEMLERİ_GERİ.UseVisualStyleBackColor = false;
             TAHSİLAT_İŞLEMLERİ_GERİ.Click += TAHSİLAT_İŞLEMLERİ_GERİ_Click;
             // 
             // TAHSİLAT_iŞLEMLERİ
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = TAHSİLAT_İŞLEMLERİ_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(TAHSİLAT_İŞLEMLERİ_GERİ);
@@ -90,6 +98,7 @@
             Controls.Add(Tahsilatlar);
             Controls.Add(label1);
             Name = "TAHSİLAT_iŞLEMLERİ";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TAHSİLAT_iŞLEMLERİ";
             ResumeLayout(false);
             PerformLayout();

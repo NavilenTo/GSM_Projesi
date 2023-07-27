@@ -37,7 +37,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(12, 96);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -47,6 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(366, 9);
@@ -57,31 +60,40 @@
             // 
             // Faturlar_Sil
             // 
+            Faturlar_Sil.BackColor = Color.Snow;
+            Faturlar_Sil.FlatStyle = FlatStyle.Flat;
             Faturlar_Sil.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            Faturlar_Sil.Image = Properties.Resources.eraser1;
+            Faturlar_Sil.ImageAlign = ContentAlignment.MiddleLeft;
             Faturlar_Sil.Location = new Point(632, 135);
             Faturlar_Sil.Name = "Faturlar_Sil";
             Faturlar_Sil.Size = new Size(110, 29);
             Faturlar_Sil.TabIndex = 2;
             Faturlar_Sil.Text = "Sil";
-            Faturlar_Sil.UseVisualStyleBackColor = true;
+            Faturlar_Sil.UseVisualStyleBackColor = false;
             Faturlar_Sil.Click += Faturlar_Sil_Click;
             // 
             // FATURALAR_GERİ
             // 
+            FATURALAR_GERİ.BackColor = Color.White;
+            FATURALAR_GERİ.BackgroundImage = Properties.Resources.back;
+            FATURALAR_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            FATURALAR_GERİ.FlatStyle = FlatStyle.Flat;
             FATURALAR_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FATURALAR_GERİ.ForeColor = SystemColors.ControlText;
-            FATURALAR_GERİ.Location = new Point(12, 409);
+            FATURALAR_GERİ.Location = new Point(12, 12);
             FATURALAR_GERİ.Name = "FATURALAR_GERİ";
-            FATURALAR_GERİ.Size = new Size(128, 29);
+            FATURALAR_GERİ.Size = new Size(60, 29);
             FATURALAR_GERİ.TabIndex = 13;
-            FATURALAR_GERİ.Text = "Geri";
-            FATURALAR_GERİ.UseVisualStyleBackColor = true;
+            FATURALAR_GERİ.UseVisualStyleBackColor = false;
             FATURALAR_GERİ.Click += FATURALAR_GERİ_Click;
             // 
             // FATURALAR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = FATURALAR_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(FATURALAR_GERİ);
@@ -89,6 +101,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "FATURALAR";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FATURALAR";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

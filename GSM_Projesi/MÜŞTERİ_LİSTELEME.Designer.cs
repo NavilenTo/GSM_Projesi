@@ -39,41 +39,54 @@
             // 
             // MÜŞTERİ_LİSTELE_GERİ
             // 
+            MÜŞTERİ_LİSTELE_GERİ.BackColor = Color.White;
+            MÜŞTERİ_LİSTELE_GERİ.BackgroundImage = Properties.Resources.back;
+            MÜŞTERİ_LİSTELE_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            MÜŞTERİ_LİSTELE_GERİ.FlatStyle = FlatStyle.Flat;
             MÜŞTERİ_LİSTELE_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             MÜŞTERİ_LİSTELE_GERİ.ForeColor = SystemColors.ControlText;
-            MÜŞTERİ_LİSTELE_GERİ.Location = new Point(12, 409);
+            MÜŞTERİ_LİSTELE_GERİ.Location = new Point(12, 12);
             MÜŞTERİ_LİSTELE_GERİ.Name = "MÜŞTERİ_LİSTELE_GERİ";
-            MÜŞTERİ_LİSTELE_GERİ.Size = new Size(128, 29);
+            MÜŞTERİ_LİSTELE_GERİ.Size = new Size(69, 29);
             MÜŞTERİ_LİSTELE_GERİ.TabIndex = 11;
-            MÜŞTERİ_LİSTELE_GERİ.Text = "Geri";
-            MÜŞTERİ_LİSTELE_GERİ.UseVisualStyleBackColor = true;
+            MÜŞTERİ_LİSTELE_GERİ.UseVisualStyleBackColor = false;
             MÜŞTERİ_LİSTELE_GERİ.Click += MÜŞTERİ_LİSTELE_GERİ_Click;
             // 
             // MÜŞTERİ_SİL
             // 
+            MÜŞTERİ_SİL.BackColor = Color.Snow;
+            MÜŞTERİ_SİL.FlatStyle = FlatStyle.Flat;
             MÜŞTERİ_SİL.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            MÜŞTERİ_SİL.Image = Properties.Resources.eraser1;
+            MÜŞTERİ_SİL.ImageAlign = ContentAlignment.MiddleLeft;
             MÜŞTERİ_SİL.Location = new Point(675, 91);
             MÜŞTERİ_SİL.Name = "MÜŞTERİ_SİL";
             MÜŞTERİ_SİL.Size = new Size(113, 32);
             MÜŞTERİ_SİL.TabIndex = 12;
             MÜŞTERİ_SİL.Text = "Sil";
-            MÜŞTERİ_SİL.UseVisualStyleBackColor = true;
+            MÜŞTERİ_SİL.UseVisualStyleBackColor = false;
             MÜŞTERİ_SİL.Click += MÜŞTERİ_SİL_Click;
             // 
             // MÜŞTERİ_GÜNCELLE
             // 
+            MÜŞTERİ_GÜNCELLE.BackColor = Color.Yellow;
+            MÜŞTERİ_GÜNCELLE.FlatStyle = FlatStyle.Flat;
             MÜŞTERİ_GÜNCELLE.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            MÜŞTERİ_GÜNCELLE.Location = new Point(675, 149);
+            MÜŞTERİ_GÜNCELLE.Image = Properties.Resources.senkronize;
+            MÜŞTERİ_GÜNCELLE.ImageAlign = ContentAlignment.MiddleLeft;
+            MÜŞTERİ_GÜNCELLE.Location = new Point(675, 168);
             MÜŞTERİ_GÜNCELLE.Name = "MÜŞTERİ_GÜNCELLE";
-            MÜŞTERİ_GÜNCELLE.Size = new Size(113, 32);
+            MÜŞTERİ_GÜNCELLE.Size = new Size(113, 42);
             MÜŞTERİ_GÜNCELLE.TabIndex = 13;
             MÜŞTERİ_GÜNCELLE.Text = "Güncelle";
-            MÜŞTERİ_GÜNCELLE.UseVisualStyleBackColor = true;
+            MÜŞTERİ_GÜNCELLE.TextAlign = ContentAlignment.MiddleRight;
+            MÜŞTERİ_GÜNCELLE.UseVisualStyleBackColor = false;
             MÜŞTERİ_GÜNCELLE.Click += MÜŞTERİ_GÜNCELLE_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(308, 9);
@@ -85,7 +98,9 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(23, 91);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -104,6 +119,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = MÜŞTERİ_LİSTELE_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(textBox1);
@@ -113,6 +130,7 @@
             Controls.Add(MÜŞTERİ_SİL);
             Controls.Add(MÜŞTERİ_LİSTELE_GERİ);
             Name = "MÜŞTERİ_LİSTELEME";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MÜŞTERİ_LİSTELEME";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -51,19 +51,23 @@
             // 
             // TARİFE_ATAMA_GERİ
             // 
+            TARİFE_ATAMA_GERİ.BackColor = Color.White;
+            TARİFE_ATAMA_GERİ.BackgroundImage = Properties.Resources.back;
+            TARİFE_ATAMA_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            TARİFE_ATAMA_GERİ.FlatStyle = FlatStyle.Flat;
             TARİFE_ATAMA_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TARİFE_ATAMA_GERİ.ForeColor = SystemColors.ControlText;
-            TARİFE_ATAMA_GERİ.Location = new Point(12, 503);
+            TARİFE_ATAMA_GERİ.Location = new Point(12, 12);
             TARİFE_ATAMA_GERİ.Name = "TARİFE_ATAMA_GERİ";
-            TARİFE_ATAMA_GERİ.Size = new Size(128, 29);
+            TARİFE_ATAMA_GERİ.Size = new Size(65, 29);
             TARİFE_ATAMA_GERİ.TabIndex = 10;
-            TARİFE_ATAMA_GERİ.Text = "Geri";
-            TARİFE_ATAMA_GERİ.UseVisualStyleBackColor = true;
+            TARİFE_ATAMA_GERİ.UseVisualStyleBackColor = false;
             TARİFE_ATAMA_GERİ.Click += TARİFE_ATAMA_GERİ_Click;
             // 
             // TARİFEATAMA
             // 
             TARİFEATAMA.AutoSize = true;
+            TARİFEATAMA.BackColor = Color.Transparent;
             TARİFEATAMA.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             TARİFEATAMA.ForeColor = SystemColors.Highlight;
             TARİFEATAMA.Location = new Point(574, 9);
@@ -74,13 +78,16 @@
             // 
             // TARİFE_ATA
             // 
+            TARİFE_ATA.BackColor = Color.White;
             TARİFE_ATA.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            TARİFE_ATA.Image = Properties.Resources.ok__1_2;
+            TARİFE_ATA.ImageAlign = ContentAlignment.MiddleLeft;
             TARİFE_ATA.Location = new Point(677, 414);
             TARİFE_ATA.Name = "TARİFE_ATA";
-            TARİFE_ATA.Size = new Size(121, 29);
+            TARİFE_ATA.Size = new Size(187, 29);
             TARİFE_ATA.TabIndex = 16;
             TARİFE_ATA.Text = "Tarife Ata";
-            TARİFE_ATA.UseVisualStyleBackColor = true;
+            TARİFE_ATA.UseVisualStyleBackColor = false;
             TARİFE_ATA.Click += TARİFE_ATA_Click;
             // 
             // Tarife_Müşteri
@@ -94,7 +101,9 @@
             // 
             // TARİFE_ATAMA_MÜŞTERİ
             // 
+            TARİFE_ATAMA_MÜŞTERİ.BackgroundColor = Color.White;
             TARİFE_ATAMA_MÜŞTERİ.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TARİFE_ATAMA_MÜŞTERİ.GridColor = Color.White;
             TARİFE_ATAMA_MÜŞTERİ.Location = new Point(585, 67);
             TARİFE_ATAMA_MÜŞTERİ.Name = "TARİFE_ATAMA_MÜŞTERİ";
             TARİFE_ATAMA_MÜŞTERİ.RowTemplate.Height = 25;
@@ -112,7 +121,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(163, 73);
             label1.Name = "label1";
             label1.Size = new Size(39, 30);
@@ -122,7 +133,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(147, 124);
             label2.Name = "label2";
             label2.Size = new Size(71, 30);
@@ -139,7 +152,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(163, 173);
             label3.Name = "label3";
             label3.Size = new Size(38, 30);
@@ -164,7 +179,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(144, 221);
             label4.Name = "label4";
             label4.Size = new Size(76, 30);
@@ -188,7 +205,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(147, 275);
             label5.Name = "label5";
             label5.Size = new Size(69, 30);
@@ -213,6 +232,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = TARİFE_ATAMA_GERİ;
             ClientSize = new Size(1353, 544);
             Controls.Add(textBox11);
@@ -234,6 +255,7 @@
             Controls.Add(TARİFEATAMA);
             Controls.Add(TARİFE_ATAMA_GERİ);
             Name = "TARİFE_ATAMA";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TARİFE_ATAMA";
             Load += TARİFE_ATAMA_Load;
             ((System.ComponentModel.ISupportInitialize)TARİFE_ATAMA_MÜŞTERİ).EndInit();

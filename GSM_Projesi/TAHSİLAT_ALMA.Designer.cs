@@ -41,18 +41,22 @@
             // 
             // Tahsilat_Alma_Button
             // 
+            Tahsilat_Alma_Button.BackColor = Color.White;
+            Tahsilat_Alma_Button.FlatStyle = FlatStyle.Flat;
             Tahsilat_Alma_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             Tahsilat_Alma_Button.Location = new Point(349, 397);
             Tahsilat_Alma_Button.Name = "Tahsilat_Alma_Button";
             Tahsilat_Alma_Button.Size = new Size(127, 32);
             Tahsilat_Alma_Button.TabIndex = 0;
             Tahsilat_Alma_Button.Text = "Tahsilat Al";
-            Tahsilat_Alma_Button.UseVisualStyleBackColor = true;
+            Tahsilat_Alma_Button.UseVisualStyleBackColor = false;
             Tahsilat_Alma_Button.Click += Tahsilat_Alma_Button_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(12, 49);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -63,6 +67,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(315, 9);
@@ -73,19 +78,23 @@
             // 
             // TAHSİLAT_ALMA_GERİ
             // 
+            TAHSİLAT_ALMA_GERİ.BackColor = Color.White;
+            TAHSİLAT_ALMA_GERİ.BackgroundImage = Properties.Resources.back;
+            TAHSİLAT_ALMA_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            TAHSİLAT_ALMA_GERİ.FlatStyle = FlatStyle.Flat;
             TAHSİLAT_ALMA_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TAHSİLAT_ALMA_GERİ.ForeColor = SystemColors.ControlText;
-            TAHSİLAT_ALMA_GERİ.Location = new Point(12, 409);
+            TAHSİLAT_ALMA_GERİ.Location = new Point(12, 14);
             TAHSİLAT_ALMA_GERİ.Name = "TAHSİLAT_ALMA_GERİ";
-            TAHSİLAT_ALMA_GERİ.Size = new Size(128, 29);
+            TAHSİLAT_ALMA_GERİ.Size = new Size(68, 29);
             TAHSİLAT_ALMA_GERİ.TabIndex = 14;
-            TAHSİLAT_ALMA_GERİ.Text = "Geri";
-            TAHSİLAT_ALMA_GERİ.UseVisualStyleBackColor = true;
+            TAHSİLAT_ALMA_GERİ.UseVisualStyleBackColor = false;
             TAHSİLAT_ALMA_GERİ.Click += TAHSİLAT_ALMA_GERİ_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(1045, 110);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
@@ -95,6 +104,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(1045, 125);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
@@ -104,6 +114,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Location = new Point(1045, 140);
             label4.Name = "label4";
             label4.Size = new Size(38, 15);
@@ -113,6 +124,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Location = new Point(1045, 155);
             label5.Name = "label5";
             label5.Size = new Size(38, 15);
@@ -123,6 +135,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = TAHSİLAT_ALMA_GERİ;
             ClientSize = new Size(1338, 450);
             Controls.Add(label5);
@@ -134,6 +148,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(Tahsilat_Alma_Button);
             Name = "TAHSİLAT_ALMA";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TAHSİLAT_ALMA";
             Load += TAHSİLAT_ALMA_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -51,7 +51,7 @@ namespace GSM_Projesi
         {
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM TARİFELER", baglantı);
             Guncelle();
-            
+
 
             baglantı.Open();
             SqlDataReader dr = sqlCommand.ExecuteReader();

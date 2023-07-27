@@ -39,18 +39,23 @@
             // 
             // Tarife_Sil
             // 
+            Tarife_Sil.BackColor = Color.Snow;
+            Tarife_Sil.FlatStyle = FlatStyle.Flat;
             Tarife_Sil.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            Tarife_Sil.Image = Properties.Resources.eraser1;
+            Tarife_Sil.ImageAlign = ContentAlignment.MiddleLeft;
             Tarife_Sil.Location = new Point(618, 169);
             Tarife_Sil.Name = "Tarife_Sil";
-            Tarife_Sil.Size = new Size(104, 31);
+            Tarife_Sil.Size = new Size(114, 31);
             Tarife_Sil.TabIndex = 0;
             Tarife_Sil.Text = "Sil";
-            Tarife_Sil.UseVisualStyleBackColor = true;
+            Tarife_Sil.UseVisualStyleBackColor = false;
             Tarife_Sil.Click += Tarife_Sil_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(327, 9);
@@ -61,18 +66,25 @@
             // 
             // Tarife_Güncelle
             // 
+            Tarife_Güncelle.BackColor = Color.Yellow;
+            Tarife_Güncelle.FlatStyle = FlatStyle.Flat;
             Tarife_Güncelle.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            Tarife_Güncelle.Image = Properties.Resources.senkronize;
+            Tarife_Güncelle.ImageAlign = ContentAlignment.MiddleLeft;
             Tarife_Güncelle.Location = new Point(618, 215);
             Tarife_Güncelle.Name = "Tarife_Güncelle";
-            Tarife_Güncelle.Size = new Size(104, 31);
+            Tarife_Güncelle.Size = new Size(114, 31);
             Tarife_Güncelle.TabIndex = 2;
             Tarife_Güncelle.Text = "Güncelle";
-            Tarife_Güncelle.UseVisualStyleBackColor = true;
+            Tarife_Güncelle.TextAlign = ContentAlignment.MiddleRight;
+            Tarife_Güncelle.UseVisualStyleBackColor = false;
             Tarife_Güncelle.Click += Tarife_Güncelle_Click;
             // 
             // Tarifeler_DataGridView
             // 
+            Tarifeler_DataGridView.BackgroundColor = Color.White;
             Tarifeler_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Tarifeler_DataGridView.GridColor = Color.White;
             Tarifeler_DataGridView.Location = new Point(39, 92);
             Tarifeler_DataGridView.Name = "Tarifeler_DataGridView";
             Tarifeler_DataGridView.RowTemplate.Height = 25;
@@ -82,14 +94,17 @@
             // 
             // TARİFELER_GERİ
             // 
+            TARİFELER_GERİ.BackColor = Color.White;
+            TARİFELER_GERİ.BackgroundImage = Properties.Resources.back;
+            TARİFELER_GERİ.BackgroundImageLayout = ImageLayout.Zoom;
+            TARİFELER_GERİ.FlatStyle = FlatStyle.Flat;
             TARİFELER_GERİ.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             TARİFELER_GERİ.ForeColor = SystemColors.ControlText;
-            TARİFELER_GERİ.Location = new Point(12, 409);
+            TARİFELER_GERİ.Location = new Point(12, 12);
             TARİFELER_GERİ.Name = "TARİFELER_GERİ";
-            TARİFELER_GERİ.Size = new Size(128, 29);
+            TARİFELER_GERİ.Size = new Size(56, 29);
             TARİFELER_GERİ.TabIndex = 11;
-            TARİFELER_GERİ.Text = "Geri";
-            TARİFELER_GERİ.UseVisualStyleBackColor = true;
+            TARİFELER_GERİ.UseVisualStyleBackColor = false;
             TARİFELER_GERİ.Click += TARİFELER_GERİ_Click;
             // 
             // TARİFE_ARAMA
@@ -104,6 +119,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.MüsteriIslemleri_background__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
             CancelButton = TARİFELER_GERİ;
             ClientSize = new Size(800, 450);
             Controls.Add(TARİFE_ARAMA);
@@ -113,7 +130,8 @@
             Controls.Add(label1);
             Controls.Add(Tarife_Sil);
             Name = "TARİFELER";
-            Text = "v";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TARİFELER";
             ((System.ComponentModel.ISupportInitialize)Tarifeler_DataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
